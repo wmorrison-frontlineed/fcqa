@@ -1,0 +1,1 @@
+$branch=git rev-parse --abbrev-ref HEAD; npm run build; mkdir ../../fcqa/$branch; cp build/* ../../fcqa/$branch; cd ../../fcqa/; git add .; git commit -m "updates"; git push origin master; Write-Host "Deployed at https://wmorrison-frontlineed.github.io/fcqa/$branch" -ForegroundColor Green
