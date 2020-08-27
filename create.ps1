@@ -1,5 +1,5 @@
 param (
-    [string]$SourceRepo = {Get-Location},
+    [string]$SourceRepo = (Get-Item .).FullName,
     [string]$QaRepo = "C:\Users\wmorrison\source\fcqa"
 )
 
