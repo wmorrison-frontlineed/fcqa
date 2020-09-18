@@ -28,9 +28,12 @@
     }
     PROCESS {        
         npm run build
-        cp build/* $QaRepo/$branch
-        cd $QaRepo; git add .; git commit -m "updates for $branch"; git push origin master;
-        cd $SourceRepo
+        Copy-Item -Path build/* -Destination $QaRepo/$branch -Recurse -Force
+        Set-Location $QaRepo
+        git add .;
+        git commit -m "updates for $branch";
+        git push origin master;
+        Set-Location $SourceRepo
     }
     END {
         Write-Host "Deployed at https://wmorrison-frontlineed.github.io/fcqa/$branch" -ForegroundColor Blue
