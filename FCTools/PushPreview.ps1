@@ -20,11 +20,11 @@
             New-Item -Path $QaRepo/$branch -ItemType "Container" -ErrorAction Stop
         }
 
-        $node = Get-Process node -ErrorAction SilentlyContinue
-        if ( $node ) {
-            Write-Verbose "Stopping node process"
-            $node | Stop-Process -Force
-        }
+        # $node = Get-Process node -ErrorAction SilentlyContinue
+        # if ( $node ) {
+        #     Write-Verbose "Stopping node process"
+        #     $node | Stop-Process -Force
+        # }
     }
     PROCESS {        
         npm run build
