@@ -6,7 +6,7 @@
         [string]$SourceRepo = (Get-Item .).FullName,
         [Parameter(Mandatory=$false, HelpMessage="Path to QA repository.")]
         [string]$QaRepo = "C:\Users\wmorrison\source\fcqa",
-        [string]$branch = (git rev-parse --abbrev-ref HEAD) + "-" + (Split-Path -Path $pwd -Leaf).split("-")[-1]
+        [string]$branch = (git rev-parse --abbrev-ref HEAD) + "-" + (Split-Path -Path Get-Location -Leaf).split("-")[-1]
     )
     BEGIN {
         if  ( !( Test-Path -Path $QaRepo -PathType "Container" ) ) {            
