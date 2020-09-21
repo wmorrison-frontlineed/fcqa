@@ -6,7 +6,8 @@
         [string]$SourceRepo = (Get-Item .).FullName,
         [Parameter(Mandatory=$false, HelpMessage="Path to QA repository.")]
         [string]$QaRepo = "C:\Users\wmorrison\source\fcqa",
-        [string]$branch = (git rev-parse --abbrev-ref HEAD) + "-" + (Split-Path -Path (Get-Location) -Leaf).split("-")[-1]
+        [Parameter(Mandatory=$false, HelpMessage="FCQA Deployment Location.")]
+        [string]$Destination = (git rev-parse --abbrev-ref HEAD) + "-" + (Split-Path -Path (Get-Location) -Leaf).split("-")[-1]
     )
     BEGIN {
         if  ( !( Test-Path -Path $QaRepo -PathType "Container" ) ) {            
@@ -15,9 +16,9 @@
         
         }
         
-        if ( !( Test-Path -Path $QaRepo/$branch -PathType "Container" ) ) {
-            Write-Verbose "Create story folder $branch"
-            New-Item -Path $QaRepo/$branch -ItemType "Container" -ErrorAction Stop
+        if ( !( Test-Path -Path $QaRepo/$Destination -PathType "Container" ) ) {
+            Write-Verbose "Create story folder $Destination"
+            New-Item -Path $QaRepo/$Destination -ItemType "Container" -ErrorAction Stop
         }
 
         # $node = Get-Process node -ErrorAction SilentlyContinue
@@ -28,14 +29,14 @@
     }
     PROCESS {        
         npm run build
-        Copy-Item -Path build/* -Destination $QaRepo/$branch -Recurse -Force
+        Copy-Item -Path build/* -Destination $QaRepo/$Destination -Recurse -Force
         Set-Location $QaRepo
         git add .;
-        git commit -m "updates for $branch";
+        git commit -m "updates for $Destination";
         git push origin master;
         Set-Location $SourceRepo
     }
     END {
-        Write-Host "Deployed at https://wmorrison-frontlineed.github.io/fcqa/$branch" -ForegroundColor Blue
+        Write-Host "Deployed at https://wmorrison-frontlineed.github.io/fcqa/$Destination" -ForegroundColor Blue
     }
 }
