@@ -6,8 +6,7 @@
         [string]$SourceRepo = (Get-Item .).FullName,
         [Parameter(Mandatory=$false, HelpMessage="Path to QA repository.")]
         [string]$QaRepo = "C:\Users\wmorrison\source\fcqa",
-        [string]$branch = (git rev-parse --abbrev-ref HEAD),
-        [string]$module = (Split-Path -Path $SourceRepo -Leaf).split("-")[-1]
+        [string]$branch = "${(git rev-parse --abbrev-ref HEAD)}-${(Split-Path -Path $SourceRepo -Leaf).split("-")[-1]}"
     )
     BEGIN {
         if  ( !( Test-Path -Path $QaRepo -PathType "Container" ) ) {            
@@ -16,9 +15,9 @@
         
         }
         
-        if ( !( Test-Path -Path "${QaRepo}/${branch}-${module}" -PathType "Container" ) ) {
-            Write-Verbose "Create story folder ${branch}-${module}"
-            New-Item -Path "${QaRepo}/${branch}-${module}" -ItemType "Container" -ErrorAction Stop
+        if ( !( Test-Path -Path $QaRepo/$branch -PathType "Container" ) ) {
+            Write-Verbose "Create story folder $branch"
+            New-Item -Path $QaRepo/$branch -ItemType "Container" -ErrorAction Stop
         }
 
         # $node = Get-Process node -ErrorAction SilentlyContinue
