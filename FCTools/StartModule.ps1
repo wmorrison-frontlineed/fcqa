@@ -8,19 +8,19 @@
         [PSCustomObject]@{
             Name = "SuperSuit-Jarvis";
             Alias = "jar";
-            Path = "C:\Users\wmorrison\source\frontline\SuperSuit-Framework-Angularjs";
+            Path = "C:\Users\wmorrison\source\frontline\SuperSuit-Jarvis";
             Script = "npm run develop";
         }
         [PSCustomObject]@{
             Name = "SuperSuit-Plugin-FluidStyles";
             Alias = "pfs";
-            Path = "C:\Users\wmorrison\source\frontline\SuperSuit-Framework-Angularjs";
+            Path = "C:\Users\wmorrison\source\frontline\SuperSuit-Plugin-FluidStyles";
             Script = "npm run develop";
         }
         [PSCustomObject]@{
             Name = "SuperSuit-Sidekick";
             Alias = "sk";
-            Path = "C:\Users\wmorrison\source\frontline\SuperSuit-Framework-Angularjs";
+            Path = "C:\Users\wmorrison\source\frontline\SuperSuit-Sidekick";
             Script = "npm run develop";
         }
         [PSCustomObject]@{
