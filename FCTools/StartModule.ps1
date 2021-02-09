@@ -30,9 +30,9 @@
             Script = "npm run develop";
         }
         [PSCustomObject]@{
-            Name = "SuperSuit-UI-Module-EC-Employee";
+            Name = "SuperSuit-UI-Module-Universal-Employee";
             Alias = "emp";
-            Path = "C:\Users\wmorrison\source\frontline\SuperSuit-UI-Module-EC-Employee";
+            Path = "C:\Users\wmorrison\source\frontline\SuperSuit-UI-Module-Universal-Employee";
             Script = "npm run develop";
         }
         [PSCustomObject]@{
