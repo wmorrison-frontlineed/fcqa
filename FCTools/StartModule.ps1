@@ -47,6 +47,18 @@
             Path = "C:\Users\wmorrison\source\frontline\SuperSuit-UI-Module-EC-Settings";
             Script = "npm run develop";
         }
+        [PSCustomObject]@{
+            Name = "SuperSuit-UI-Module-Universal-Overview";
+            Alias = "ov";
+            Path = "C:\Users\wmorrison\source\frontline\SuperSuit-UI-Module-Universal-Overview";
+            Script = "npm run develop";
+        }
+        [PSCustomObject]@{
+            Name = "SuperSuit-UI-Module-Universal-Overview";
+            Alias = "bff";
+            Path = "C:\Users\wmorrison\source\frontline\SuperSuit-UI-Module-Universal-Overview";
+            Script = "npm run mock-bff";
+        }
     )
 
 Function Start-Module {
@@ -163,6 +175,30 @@ Function Start-Settings {
     }
     PROCESS {
         Start-Module -Name set
+    }
+    END {
+    }
+}
+
+Function Start-Overview {
+    [CmdletBinding()]
+    param ()
+    BEGIN {
+    }
+    PROCESS {
+        Start-Module -Name ov
+    }
+    END {
+    }
+}
+
+Function Start-Bff {
+    [CmdletBinding()]
+    param ()
+    BEGIN {
+    }
+    PROCESS {
+        Start-Module -Name bff
     }
     END {
     }
