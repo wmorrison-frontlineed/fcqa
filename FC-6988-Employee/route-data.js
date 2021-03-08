@@ -29,7 +29,7 @@ registerRouteData('universal-employee', [{
     }
 }, {
     stateName: 'employeeRecord.employment',
-    url: '/employment{action:.*}',
+    url: '/employment',
     $permissions: function $permissions(permissionSvc) {
         return permissionSvc.isPermittedAction('employees', 'edit') || permissionSvc.isPermittedAction('employees', 'view');
     }
