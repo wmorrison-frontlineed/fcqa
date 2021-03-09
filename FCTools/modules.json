@@ -1,0 +1,64 @@
+{
+    "modules": [
+        {
+            "name": "SuperSuit-Framework-Angular",
+            "alias": "ang",
+            "path": "C:\\Users\\wmorrison\\source\\frontline\\SuperSuit-Framework-Angularjs",
+            "script": "yarn develop"
+        },
+        {
+            "name": "SuperSuit-Jarvis",
+            "alias": "jar",
+            "path": "C:\\Users\\wmorrison\\source\\frontline\\SuperSuit-Jarvis",
+            "script": "npm run develop"
+        },
+        {
+            "name": "SuperSuit-Plugin-FluidStyles",
+            "alias": "pfs",
+            "path": "C:\\Users\\wmorrison\\source\\frontline\\SuperSuit-Plugin-FluidStyles",
+            "script": "npm run develop"
+        },
+        {
+            "name": "SuperSuit-Sidekick",
+            "alias": "sk",
+            "path": "C:\\Users\\wmorrison\\source\\frontline\\SuperSuit-Sidekick",
+            "script": "npm run develop"
+        },
+        {
+            "name": "SuperSuit-UI-Module-EC-Dashboard",
+            "alias": "dash",
+            "path": "C:\\Users\\wmorrison\\source\\frontline\\SuperSuit-UI-Module-EC-Dashboard",
+            "script": "npm run develop"
+        },
+        {
+            "name": "SuperSuit-UI-Module-Universal-Employee",
+            "alias": "emp",
+            "path": "C:\\Users\\wmorrison\\source\\frontline\\SuperSuit-UI-Module-Universal-Employee",
+            "script": "npm run develop"
+        },
+        {
+            "name": "SuperSuit-UI-Module-EC-Forms",
+            "alias": "forms",
+            "path": "C:\\Users\\wmorrison\\source\\frontline\\SuperSuit-UI-Module-EC-Forms",
+            "script": "npm run develop"
+        },
+        {
+            "name": "SuperSuit-UI-Module-EC-Settings",
+            "alias": "set",
+            "path": "C:\\Users\\wmorrison\\source\\frontline\\SuperSuit-UI-Module-EC-Settings",
+            "script": "npm run develop"
+        },
+        {
+            "name": "SuperSuit-UI-Module-Universal-Overview",
+            "alias": "ov",
+            "path": "C:\\Users\\wmorrison\\source\\frontline\\SuperSuit-UI-Module-Universal-Overview",
+            "script": "npm run develop"
+        },
+        {
+            "name": "SuperSuit-UI-Module-Universal-Overview",
+            "alias": "bff",
+            "path": "C:\\Users\\wmorrison\\source\\frontline\\SuperSuit-UI-Module-Universal-Overview",
+            "script": "npm run mock-bff"
+        }
+    ]
+}

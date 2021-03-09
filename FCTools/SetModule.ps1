@@ -1,7 +1,7 @@
 ﻿Set-Location 'C:\Users\wmorrison\Documents\WindowsPowerShell\Modules\FCTools'
 $config = (Get-Content modules.json | Out-String | ConvertFrom-Json)
 
-Function Start-Module {
+Function Set-Module {
     [CmdletBinding()]
 
     param (
@@ -16,129 +16,128 @@ Function Start-Module {
         }
     }
     PROCESS {     
-        Write-Host "Starting ${$SelectedModule.name}"
+        Write-Host "Set-Location ${$SelectedModule.name}"
         Set-Location $SelectedModule.path
     }
     END {
-        Invoke-Expression $SelectedModule.script
     }
 }
 
-Function Start-AngularJs {
+Function Set-AngularJs {
     [CmdletBinding()]
     param ()
     BEGIN {
     }
     PROCESS {
-        Start-Module -Name ang
+        Set-Module -Name ang
     }
     END {
     }
 }
 
-Function Start-Jarvis {
+Function Set-Jarvis {
     [CmdletBinding()]
     param ()
     BEGIN {
     }
     PROCESS {
-        Start-Module -Name jar
+        Set-Module -Name jar
     }
     END {
     }
 }
 
-Function Start-FluidStyles {
+Function Set-FluidStyles {
     [CmdletBinding()]
     param ()
     BEGIN {
     }
     PROCESS {
-        Start-Module -Name pfs
+        Set-Module -Name pfs
     }
     END {
     }
 }
 
-Function Start-Sidekick {
+Function Set-Sidekick {
     [CmdletBinding()]
     param ()
     BEGIN {
     }
     PROCESS {
-        Start-Module -Name sk
+        Set-Module -Name sk
     }
     END {
     }
 }
 
-Function Start-Dashboard {
+Function Set-Dashboard {
     [CmdletBinding()]
     param ()
     BEGIN {
     }
     PROCESS {
-        Start-Module -Name dash
+        Set-Module -Name dash
     }
     END {
     }
 }
 
-Function Start-Employee {
+Function Set-Employee {
     [CmdletBinding()]
     param ()
     BEGIN {
     }
     PROCESS {
-        Start-Module -Name emp
+        Set-Module -Name emp
     }
     END {
     }
 }
 
-Function Start-Forms {
+Function Set-Forms {
     [CmdletBinding()]
     param ()
     BEGIN {
     }
     PROCESS {
-        Start-Module -Name forms
+        Set-Module -Name forms
     }
     END {
     }
 }
 
-Function Start-Settings {
+Function Set-Settings {
     [CmdletBinding()]
     param ()
     BEGIN {
     }
     PROCESS {
-        Start-Module -Name set
+        Set-Module -Name set
     }
     END {
     }
 }
 
-Function Start-Overview {
+Function Set-Overview {
     [CmdletBinding()]
     param ()
     BEGIN {
     }
     PROCESS {
-        Start-Module -Name ov
+        Set-Module -Name ov
     }
     END {
     }
 }
 
-Function Start-Bff {
+Function Set-Bff {
     [CmdletBinding()]
     param ()
     BEGIN {
     }
     PROCESS {
-        Start-Module -Name bff
+        Set-Module -Name bff
     }
     END {
     }
