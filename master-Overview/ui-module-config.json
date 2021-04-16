@@ -1,6 +1,7 @@
 {
   "dependencySets": [
-    "highcharts"
+    "highcharts",
+    "fc-common"
   ],
   "fluidImports": [],
   "name": "universal-overview"
