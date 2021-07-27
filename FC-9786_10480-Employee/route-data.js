@@ -13,7 +13,7 @@ registerRouteData('universal-employee', [{
     stateName: 'employeeRecord.assignments',
     url: '/assignments',
     $permissions: function $permissions(permissionSvc) {
-        return permissionSvc.isPermittedAction('assignments', 'view') || permissionSvc.isPermittedAction('supplementals', 'view');
+        return permissionSvc.isPermittedAction('assignments', 'view') || permissionSvc.isPermittedAction('employeeSupplementals', 'view');
     }
 }, {
     stateName: 'employeeRecord.credentials',
