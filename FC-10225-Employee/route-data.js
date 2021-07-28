@@ -11,7 +11,10 @@ registerRouteData('universal-employee', [{
     url: '/applications'
 }, {
     stateName: 'employeeRecord.assignments',
-    url: '/assignments'
+    url: '/assignments',
+    $permissions: function $permissions(permissionSvc) {
+        return permissionSvc.isPermittedAction('assignments', 'view') || permissionSvc.isPermittedAction('employeeSupplementals', 'view');
+    }
 }, {
     stateName: 'employeeRecord.credentials',
     url: '/credentials',
