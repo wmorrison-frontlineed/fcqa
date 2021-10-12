@@ -10,6 +10,12 @@ registerRouteData('universal-employee', [{
     stateName: 'employeeRecord.applications',
     url: '/applications'
 }, {
+    stateName: 'employeeRecord.assignments',
+    url: '/assignments',
+    $permissions: function $permissions(permissionSvc) {
+        return permissionSvc.isPermittedAction('assignments', 'view') || permissionSvc.isPermittedAction('employeeSupplementals', 'view');
+    }
+}, {
     stateName: 'employeeRecord.credentials',
     url: '/credentials',
     $permissions: function $permissions(permissionSvc) {
@@ -102,4 +108,10 @@ registerRouteData('universal-employee', [{
 }, {
     stateName: 'reports',
     url: '/reports'
+}, {
+    stateName: 'reports.SystemJobs',
+    url: '/system-jobs',
+    $permissions: function $permissions(ssPermissionSvc) {
+        return ssPermissionSvc.checkIfUserRole('IdmAdministrator');
+    }
 }]);
