@@ -2,10 +2,7 @@
 
 registerRouteData('universal-employee', [{
     stateName: 'downloads',
-    url: '/downloads?&fileid',
-    $permissions: function $permissions(ssPermissionSvc) {
-        return ssPermissionSvc.checkIfUserRole('IdmAdministrator');
-    }
+    url: '/downloads?&fileid'
 }, {
     stateName: 'employeeRecord.applications',
     url: '/applications'
@@ -59,7 +56,7 @@ registerRouteData('universal-employee', [{
     }
 }, {
     stateName: 'index',
-    url: '/?sortBy&clearFilters',
+    url: '/',
     $permissions: function $permissions(permissionSvc) {
         return permissionSvc.isPermittedAction('bundle', 'viewothers');
     }
@@ -111,7 +108,7 @@ registerRouteData('universal-employee', [{
 }, {
     stateName: 'reports.SystemJobs',
     url: '/system-jobs',
-    $permissions: function $permissions(ssPermissionSvc) {
-        return ssPermissionSvc.checkIfUserRole('IdmAdministrator');
+    $permissions: function $permissions(permissionSvc) {
+        return permissionSvc.isPermittedAction('DataImports', 'View_DownloadsMenuItem');
     }
 }]);
