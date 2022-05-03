@@ -1,6 +1,12 @@
 {
     "modules": [
         {
+            "name": "FC-UI-Shared-Components",
+            "alias": "ui",
+            "path": "C:\\Users\\wmorrison\\source\\frontline\\fc-ui-shared-components",
+            "script": "npm run develop"
+        },
+        {
             "name": "SuperSuit-Framework-Angular",
             "alias": "ang",
             "path": "C:\\Users\\wmorrison\\source\\frontline\\SuperSuit-Framework-Angularjs",

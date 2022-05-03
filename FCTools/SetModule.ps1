@@ -23,6 +23,18 @@ Function Set-Module {
     }
 }
 
+Function Set-UI {
+    [CmdletBinding()]
+    param ()
+    BEGIN {
+    }
+    PROCESS {
+        Set-Module -Name ui
+    }
+    END {
+    }
+}
+
 Function Set-AngularJs {
     [CmdletBinding()]
     param ()

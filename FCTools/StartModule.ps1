@@ -16,11 +16,23 @@ Function Start-Module {
         }
     }
     PROCESS {     
-        Write-Host "Starting ${$SelectedModule.name}"
+        Write-Host "Starting $($SelectedModule.name)"
         Set-Location $SelectedModule.path
     }
     END {
         Invoke-Expression $SelectedModule.script
+    }
+}
+
+Function Start-UI {
+    [CmdletBinding()]
+    param ()
+    BEGIN {
+    }
+    PROCESS {
+        Start-Module -Name ui
+    }
+    END {
     }
 }
 
