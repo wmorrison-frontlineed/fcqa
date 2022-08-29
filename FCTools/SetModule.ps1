@@ -16,20 +16,44 @@ Function Set-Module {
         }
     }
     PROCESS {     
-        Write-Host "Set-Location ${$SelectedModule.name}"
+        Write-Host "Changing working directory to $($SelectedModule.name)"
         Set-Location $SelectedModule.path
     }
     END {
     }
 }
 
-Function Set-UI {
+Function Set-UI-Shared {
     [CmdletBinding()]
     param ()
     BEGIN {
     }
     PROCESS {
-        Set-Module -Name ui
+        Set-Module -Name ui-shared
+    }
+    END {
+    }
+}
+
+Function Set-UI-Settings {
+    [CmdletBinding()]
+    param ()
+    BEGIN {
+    }
+    PROCESS {
+        Set-Module -Name ui-settings
+    }
+    END {
+    }
+}
+
+Function Set-UI-Staff {
+    [CmdletBinding()]
+    param ()
+    BEGIN {
+    }
+    PROCESS {
+        Set-Module -Name ui-staff
     }
     END {
     }

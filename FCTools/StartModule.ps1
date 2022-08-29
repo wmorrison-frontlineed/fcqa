@@ -24,13 +24,37 @@ Function Start-Module {
     }
 }
 
-Function Start-UI {
+Function Start-UI-Shared {
     [CmdletBinding()]
     param ()
     BEGIN {
     }
     PROCESS {
-        Start-Module -Name ui
+        Start-Module -Name ui-shared
+    }
+    END {
+    }
+}
+
+Function Start-UI-Settings {
+    [CmdletBinding()]
+    param ()
+    BEGIN {
+    }
+    PROCESS {
+        Start-Module -Name ui-settings
+    }
+    END {
+    }
+}
+
+Function Start-UI-Staff {
+    [CmdletBinding()]
+    param ()
+    BEGIN {
+    }
+    PROCESS {
+        Start-Module -Name ui-staff
     }
     END {
     }

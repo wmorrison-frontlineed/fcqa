@@ -2,8 +2,20 @@
     "modules": [
         {
             "name": "FC-UI-Shared-Components",
-            "alias": "ui",
+            "alias": "ui-shared",
             "path": "C:\\Users\\wmorrison\\source\\frontline\\fc-ui-shared-components",
+            "script": "npm run develop"
+        },
+        {
+            "name": "FC-UI-Settings",
+            "alias": "ui-settings",
+            "path": "C:\\Users\\wmorrison\\source\\frontline\\fc-ui-settings",
+            "script": "npm run develop"
+        },
+        {
+            "name": "FC-UI-Staff-Member",
+            "alias": "ui-staff",
+            "path": "C:\\Users\\wmorrison\\source\\frontline\\fc-ui-staff-member",
             "script": "npm run develop"
         },
         {
