@@ -39,6 +39,12 @@
       "alias": "models",
       "path": "C:\\source\\Frontline\\ss-lib-canonical-models",
       "script": ""
+    },
+    {
+      "name": "K8s-Deployments",
+      "alias": "k8s-deployment",
+      "path": "C:\\source\\Frontline\\k8s-deployments",
+      "script": ""
     }
   ]
 }
