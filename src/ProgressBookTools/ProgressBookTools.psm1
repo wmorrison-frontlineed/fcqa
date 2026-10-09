@@ -1,1 +1,0 @@
-. $psScriptRoot\CopyConfig.ps1
