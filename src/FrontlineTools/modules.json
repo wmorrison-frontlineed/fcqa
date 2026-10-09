@@ -1,0 +1,44 @@
+{
+  "modules": [
+    {
+      "name": "ss-msvc-student-profile",
+      "alias": "profile",
+      "path": "C:\\source\\Frontline\\ss-msvc-student-profile",
+      "script": "dotnet run --project src\\service\\StudentProfile.Api --launch-profile http",
+      "awsProfile": "ss-dev"
+    },
+    {
+      "name": "ss-msvc-calendar",
+      "alias": "calendar",
+      "path": "C:\\source\\Frontline\\ss-msvc-calendar",
+      "script": "dotnet run --project src\\service\\Calendar.Api --launch-profile http",
+      "awsProfile": "ss-dev"
+    },
+    {
+      "name": "ss-msvc-student-enrollment",
+      "alias": "enrollment",
+      "path": "C:\\source\\Frontline\\ss-msvc-student-enrollment",
+      "script": ""
+    },
+    {
+      "name": "ss-msvc-course-catalog",
+      "alias": "course",
+      "path": "C:\\source\\Frontline\\ss-msvc-course-catalog",
+      "script": "dotnet run --project src\\service\\Api --launch-profile http",
+      "awsProfile": "ss-dev"
+    },
+    {
+      "name": "ss-msvc-template",
+      "alias": "template",
+      "path": "C:\\source\\Frontline\\ss-msvc-template",
+      "script": "dotnet run --project src\\service\\Api --launch-profile http",
+      "awsProfile": "ss-dev"
+    },
+    {
+      "name": "ss-lib-canonical-models",
+      "alias": "models",
+      "path": "C:\\source\\Frontline\\ss-lib-canonical-models",
+      "script": ""
+    }
+  ]
+}
