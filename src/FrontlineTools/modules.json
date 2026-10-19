@@ -45,6 +45,12 @@
       "alias": "k8s-deployment",
       "path": "C:\\source\\Frontline\\k8s-deployments",
       "script": ""
+    },
+    {
+      "name": "drafting-table",
+      "alias": "draft",
+      "path": "C:\\source\\Frontline\\frontline-drafting-table",
+      "script": ""
     }
   ]
 }
