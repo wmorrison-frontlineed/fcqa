@@ -51,6 +51,12 @@
       "alias": "draft",
       "path": "C:\\source\\Frontline\\frontline-drafting-table",
       "script": ""
+    },
+    {
+      "name": "ss-architecture-docs",
+      "alias": "docs",
+      "path": "C:\\source\\Frontline\\ss-architecture-docs",
+      "script": ""
     }
   ]
 }
